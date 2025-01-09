@@ -1,0 +1,56 @@
+
+  //Primeira forma desenvolvida para validar o Selenium Certification Curriculum
+  // it.only('1 - Valida a parte Selenium Certification Curriculum', () => {
+  //   // Função que clica em um elemento expansível com um delay entre as ações
+  //   const clickBotaoExpandir = (btnExpandir, delay = 1000) => {
+  //     cy.get(`${btnExpandir} > .curriculum__card--expand-row > .curriculum__card--expand`).click();
+  //     cy.wait(delay);  // Espera de 'delay' milissegundos após o clique
+  //   };
+  
+  //   // Array com os seletores de todas as colunas
+  //   const curriculumItens = [
+  //     // Primeira coluna
+  //     ':nth-child(1) > :nth-child(2)', 
+  //     ':nth-child(1) > :nth-child(3)',
+  //     ':nth-child(1) > :nth-child(4)',
+  //     ':nth-child(1) > :nth-child(5)',
+      
+  //     // Segunda coluna
+  //     ':nth-child(2) > :nth-child(2)', 
+  //     ':nth-child(2) > :nth-child(3)',
+  //     ':nth-child(2) > :nth-child(4)',
+  //     ':nth-child(2) > :nth-child(5)',
+  
+  //     // Terceira coluna
+  //     ':nth-child(3) > :nth-child(2)', 
+  //     ':nth-child(3) > :nth-child(3)',
+  //     ':nth-child(3) > :nth-child(4)',
+  //     ':nth-child(3) > :nth-child(5)'
+  //   ];
+  
+  //   // Para cada item na lista de curriculumItens, clica e expande
+  //   curriculumItens.forEach(item => {
+  //     clickBotaoExpandir(item, 1000);  // 1000ms de delay entre os cliques
+  //   });
+  // });
+
+  // it.only('2 - Valida a parte Selenium Certification Curriculum', () => {
+  //   // Seleciona todos os botões de expandir dentro do container .curriculum
+  //   cy.get('.curriculum .curriculum__card--expand-row > .curriculum__card--expand')
+  //     .each(($elemento) => {
+  //       cy.wrap($elemento).click(); // Clica em cada elemento individualmente
+  //       cy.wait(1000); // Delay opcional de 1 segundo
+  //       cy.wrap($elemento).parent().next().should('be.visible'); // Verifica que o conteúdo expandido está visível
+  //     });
+  // });
+  
+  
+  //each percorre cada botão encontrado:
+  //No primeiro loop, $elemento será o primeiro botão.
+  //No segundo loop, $elemento será o segundo botão, e assim por diante.
+  //parent() pega o elemento pai do botão.
+  //next() pega o próximo elemento irmão no DOM (que é o conteúdo expandido).
+
+
+  //forEach funciona com um array de objetos JavaScript (os blocos definidos com selector e expectedUrl). 
+  //Esse array não é o resultado de uma seleção DOM do Cypress, mas sim uma estrutura lógica criada manualmente
